@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/title_text_view"
+        style="@style/info"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        style="@style/news"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/author_text_view"
+            style="@style/info" />
+
+        <TextView
+            android:id="@+id/category_text_view"
+            style="@style/info" />
+
+        <TextView
+            android:id="@+id/date_text_view"
+            style="@style/info" />
+    </LinearLayout>
+
+</LinearLayout>
+
