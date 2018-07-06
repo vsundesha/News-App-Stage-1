@@ -2,37 +2,37 @@ package com.example.anrdoid.newsappstage1;
 
 
 public class News {
-    private String mTitle;
-    private String mCategory;
-    private String mDate;
-    private String mUrl;
-    private String mAuthor;
+    private String title;
+    private String category;
+    private String date;
+    private String url;
+    private String author;
 
-    public News(String mTitle, String mCategory, String mDate, String mUrl, String mAuthor) {
-        this.mTitle = mTitle;
-        this.mCategory = mCategory;
-        this.mDate = mDate;
-        this.mUrl = mUrl;
-        this.mAuthor = mAuthor;
+    public News(String title, String category, String date, String url, String author) {
+        this.title = title;
+        this.category = category;
+        this.date = date;
+        this.url = url;
+        this.author = author;
     }
 
-    public String getmTitle() {
-        return mTitle;
+    public String getTitle() {
+        return title;
     }
 
-    public String getmCategory() {
-        return mCategory;
+    public String getCategory() {
+        return category;
     }
 
-    public String getmDate() {
-        return mDate;
+    public String getDate() {
+        return date;
     }
 
-    public String getmUrl() {
-        return mUrl;
+    public String getUrl() {
+        return url;
     }
 
-    public String getmAuthor() {
-        return mAuthor;
+    public String getAuthor() {
+        return author;
     }
 }

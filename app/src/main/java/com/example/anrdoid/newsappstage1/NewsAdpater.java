@@ -22,26 +22,25 @@ public class NewsAdpater extends ArrayAdapter<News> {
         View listItemView = convertView;
         if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
-                    R.layout.item, parent, false);
+                R.layout.item, parent, false);
         }
 
         News currentNews = getItem(position);
         TextView newsTitleTextView = (TextView) listItemView.findViewById(R.id.title_text_view);
-        String title = currentNews.getmTitle();
+        String title = currentNews.getTitle();
         newsTitleTextView.setText(title);
 
+        TextView categorytextView = (TextView) listItemView.findViewById(R.id.category_text_view);
+        String category = currentNews.getCategory();
+        categorytextView.setText(category);
 
-        TextView newsCategorytextView = (TextView) listItemView.findViewById(R.id.category_text_view);
-        String category = currentNews.getmCategory();
-        newsCategorytextView.setText(category);
+        TextView datetextView = (TextView) listItemView.findViewById(R.id.date_text_view);
+        String date = currentNews.getDate();
+        datetextView.setText(date);
 
-        TextView newsDatetextView = (TextView) listItemView.findViewById(R.id.date_text_view);
-        String date = currentNews.getmDate();
-        newsDatetextView.setText(date);
-
-        TextView newsAuthortextView = (TextView) listItemView.findViewById(R.id.author_text_view);
-        String author = currentNews.getmAuthor();
-        newsAuthortextView.setText(author);
+        TextView authortextView = (TextView) listItemView.findViewById(R.id.author_text_view);
+        String author = currentNews.getAuthor();
+        authortextView.setText(author);
 
         return listItemView;
     }

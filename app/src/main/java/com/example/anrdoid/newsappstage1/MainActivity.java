@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<L
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
                 News currentNews = mAdapter.getItem(position);
-                Uri newsUri = Uri.parse(currentNews.getmUrl());
+                Uri newsUri = Uri.parse(currentNews.getUrl());
                 Intent websiteIntent = new Intent(Intent.ACTION_VIEW, newsUri);
                 startActivity(websiteIntent);
             }

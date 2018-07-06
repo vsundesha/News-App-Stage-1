@@ -19,11 +19,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class QueryUtils {
-    private QueryUtils() {
-    }
 
-    public static List<News> fetchNewsData(String requestUrl) {
-        URL url = createUrl(requestUrl);
+    public static List<News> fetchNewsFeed(String newsurl) {
+        URL url = null;
+        try {
+            url = new URL(newsurl);
+        } catch (MalformedURLException e) {
+
+            e.printStackTrace();
+        }
 
         String jsonResponse = null;
         try {
@@ -32,22 +36,10 @@ public class QueryUtils {
             e.printStackTrace();
         }
 
-        List<News> newsList = extractFeatureFromJson(jsonResponse);
+        List<News> newsList = extractFromJson(jsonResponse);
 
         return newsList;
     }
-
-    private static URL createUrl(String stringUrl) {
-        URL url = null;
-        try {
-            url = new URL(stringUrl);
-        } catch (MalformedURLException e) {
-
-            e.printStackTrace();
-        }
-        return url;
-    }
-
 
     private static String makeHttpRequest(URL url) throws IOException {
         String jsonResponse = "";
@@ -99,7 +91,7 @@ public class QueryUtils {
         return output.toString();
     }
 
-    private static List<News> extractFeatureFromJson(String newsJSON) {
+    private static List<News> extractFromJson(String newsJSON) {
         if (TextUtils.isEmpty(newsJSON)) {
             return null;
         }
@@ -127,7 +119,7 @@ public class QueryUtils {
                     JSONObject auth = tags.getJSONObject(0);
                     author = auth.getString("webTitle");
                 }else{
-                    author = "N/A";
+                    author = "unknown";
                 }
 
                 News news = new News(title, category, date, url, author);
