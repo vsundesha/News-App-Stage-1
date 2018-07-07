@@ -27,9 +27,6 @@ public class SettingsActivity extends AppCompatActivity {
             Preference minNews = findPreference(getString(R.string.settings_min_feed_key));
             bindPreferenceSummaryToValue(minNews);
 
-            Preference orderBy = findPreference(getString(R.string.settings_order_by_key));
-            bindPreferenceSummaryToValue(orderBy);
-
             Preference section = findPreference(getString(R.string.settings_section_news_key));
             bindPreferenceSummaryToValue(section);
 

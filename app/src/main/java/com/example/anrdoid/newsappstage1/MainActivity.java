@@ -69,8 +69,6 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<L
 
         String minNews = sharedPreferences.getString(getString(R.string.settings_min_feed_key),
                 getString(R.string.settings_min_feed_default));
-        String orderBy = sharedPreferences.getString(getString(R.string.settings_order_by_key),
-                getString(R.string.settings_order_by_default));
         String section = sharedPreferences.getString(getString(R.string.settings_section_news_key),
                 getString(R.string.settings_section_news_default));
 
@@ -80,7 +78,6 @@ public class MainActivity extends AppCompatActivity implements LoaderCallbacks<L
         uriBuilder.appendQueryParameter("api-key", "06c34a0d-a943-4158-b0d3-bbf46aba3271");
         uriBuilder.appendQueryParameter("show-tags", "contributor");
         uriBuilder.appendQueryParameter("page-size", minNews);
-        uriBuilder.appendQueryParameter("order-by", orderBy);
 
         if (!section.equals(getString(R.string.settings_section_news_default))) {
             uriBuilder.appendQueryParameter("section", section);
