@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">News App Stage 1</string>
+    <string name="app_name">News App Stage 2</string>
     <string name="nointernetmessages">No internet connection!</string>
     <string name="nonewsmessages">No news found!</string>
     <string name="author">Author</string>
@@ -9,7 +9,7 @@
 
     <string name="settings_min_feed_label">Minimum news feed</string>
     <string name="settings_min_feed_key" translatable="false">min_feed</string>
-    <string name="settings_min_feed_default" translatable="false">0</string>
+    <string name="settings_min_feed_default" translatable="false">10</string>
 
     <string name="settings_section_label">Section</string>
     <string name="settings_section_news_key" translatable="false">section</string>
