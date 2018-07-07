@@ -11,13 +11,13 @@ import java.util.List;
 
 public class NewsLoader extends AsyncTaskLoader<List<News>> {
 
-    private static String URL =
-            "http://content.guardianapis.com/search?" +
-                    "show-tags=contributor&api-key=" +
-                    "06c34a0d-a943-4158-b0d3-bbf46aba3271";
+    private String URL;
 
-    public NewsLoader(Context context) {
+    public NewsLoader(Context context, String url) {
+
         super(context);
+        System.out.println(url);
+        this.URL = url;
     }
 
     @Override
